@@ -1,0 +1,16 @@
+# Umgebungsvariablen
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Große Dateien
+qdrant_storage/
+
+# Andere
+.DS_Store
