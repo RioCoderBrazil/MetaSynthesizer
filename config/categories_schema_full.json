@@ -1,0 +1,287 @@
+{
+  "categories": {
+    "finding_summary": {
+      "description": "Zusammenfassung der Hauptfeststellungen",
+      "fields": {
+        "finding_id": {
+          "type": "text",
+          "required": true,
+          "max_length": 20,
+          "description": "Eindeutige Feststellungs-ID"
+        },
+        "main_finding": {
+          "type": "text",
+          "required": true,
+          "max_length": 500,
+          "description": "Hauptfeststellung"
+        },
+        "priority": {
+          "type": "text",
+          "required": true,
+          "enum": ["high", "medium", "low"],
+          "description": "Priorität der Feststellung"
+        },
+        "affected_areas": {
+          "type": "list",
+          "required": false,
+          "max_length": 100,
+          "description": "Betroffene Bereiche"
+        },
+        "related_findings": {
+          "type": "list",
+          "required": false,
+          "description": "Verwandte Feststellungen"
+        }
+      }
+    },
+    "recommendation_tracking": {
+      "description": "Verfolgung von Empfehlungen",
+      "fields": {
+        "recommendation_id": {
+          "type": "text",
+          "required": true,
+          "max_length": 20,
+          "description": "Empfehlungs-ID"
+        },
+        "recommendation_text": {
+          "type": "text",
+          "required": true,
+          "max_length": 500,
+          "description": "Empfehlungstext"
+        },
+        "responsible_entity": {
+          "type": "text",
+          "required": true,
+          "max_length": 100,
+          "description": "Verantwortliche Stelle"
+        },
+        "deadline": {
+          "type": "date",
+          "required": false,
+          "description": "Umsetzungsfrist"
+        },
+        "status": {
+          "type": "text",
+          "required": true,
+          "enum": ["open", "in_progress", "completed", "rejected"],
+          "description": "Status der Empfehlung"
+        },
+        "follow_up_actions": {
+          "type": "list",
+          "required": false,
+          "description": "Follow-up Maßnahmen"
+        }
+      }
+    },
+    "cost_analysis": {
+      "description": "Kostenanalyse",
+      "fields": {
+        "total_amount": {
+          "type": "number",
+          "required": false,
+          "description": "Gesamtbetrag"
+        },
+        "currency": {
+          "type": "text",
+          "required": false,
+          "default": "CHF",
+          "description": "Währung"
+        },
+        "cost_type": {
+          "type": "text",
+          "required": false,
+          "enum": ["actual", "estimated", "budgeted"],
+          "description": "Art der Kosten"
+        },
+        "identified_costs": {
+          "type": "list",
+          "required": false,
+          "description": "Identifizierte Einzelkosten"
+        },
+        "cost_drivers": {
+          "type": "list",
+          "required": false,
+          "description": "Kostentreiber"
+        },
+        "savings_potential": {
+          "type": "number",
+          "required": false,
+          "description": "Einsparpotenzial"
+        }
+      }
+    },
+    "risk_assessment": {
+      "description": "Risikobewertung",
+      "fields": {
+        "risk_level": {
+          "type": "text",
+          "required": true,
+          "enum": ["high", "medium", "low"],
+          "description": "Risikolevel"
+        },
+        "risk_description": {
+          "type": "text",
+          "required": true,
+          "max_length": 500,
+          "description": "Risikobeschreibung"
+        },
+        "risk_categories": {
+          "type": "list",
+          "required": false,
+          "description": "Risikokategorien"
+        },
+        "mitigation_measures": {
+          "type": "list",
+          "required": false,
+          "description": "Risikominderungsmaßnahmen"
+        },
+        "residual_risk": {
+          "type": "text",
+          "required": false,
+          "enum": ["high", "medium", "low", "none"],
+          "description": "Restrisiko"
+        }
+      }
+    },
+    "environmental_impact": {
+      "description": "Umweltauswirkungen",
+      "fields": {
+        "impact_type": {
+          "type": "text",
+          "required": true,
+          "max_length": 100,
+          "description": "Art der Umweltauswirkung"
+        },
+        "affected_media": {
+          "type": "list",
+          "required": false,
+          "description": "Betroffene Umweltmedien (Boden, Wasser, Luft)"
+        },
+        "contamination_level": {
+          "type": "text",
+          "required": false,
+          "enum": ["severe", "moderate", "minor", "none"],
+          "description": "Kontaminationsgrad"
+        },
+        "remediation_required": {
+          "type": "boolean",
+          "required": false,
+          "description": "Sanierung erforderlich"
+        },
+        "environmental_costs": {
+          "type": "number",
+          "required": false,
+          "description": "Umweltkosten"
+        }
+      }
+    },
+    "audit_metadata": {
+      "description": "Prüfungsmetadaten",
+      "fields": {
+        "audit_number": {
+          "type": "text",
+          "required": true,
+          "max_length": 20,
+          "description": "Prüfungsnummer"
+        },
+        "audit_title": {
+          "type": "text",
+          "required": true,
+          "max_length": 200,
+          "description": "Prüfungstitel"
+        },
+        "audit_date": {
+          "type": "date",
+          "required": true,
+          "description": "Prüfungsdatum"
+        },
+        "audit_department": {
+          "type": "text",
+          "required": true,
+          "max_length": 100,
+          "description": "Geprüfte Abteilung"
+        },
+        "audit_scope": {
+          "type": "text",
+          "required": false,
+          "max_length": 500,
+          "description": "Prüfungsumfang"
+        }
+      }
+    },
+    "compliance_status": {
+      "description": "Compliance-Status",
+      "fields": {
+        "compliance_level": {
+          "type": "text",
+          "required": true,
+          "enum": ["full", "partial", "non-compliant"],
+          "description": "Compliance-Level"
+        },
+        "regulations_checked": {
+          "type": "list",
+          "required": false,
+          "description": "Geprüfte Vorschriften"
+        },
+        "violations_found": {
+          "type": "list",
+          "required": false,
+          "description": "Gefundene Verstöße"
+        },
+        "corrective_actions": {
+          "type": "list",
+          "required": false,
+          "description": "Korrekturmaßnahmen"
+        }
+      }
+    },
+    "process_assessment": {
+      "description": "Prozessbewertung",
+      "fields": {
+        "process_name": {
+          "type": "text",
+          "required": true,
+          "max_length": 100,
+          "description": "Prozessname"
+        },
+        "process_maturity": {
+          "type": "text",
+          "required": false,
+          "enum": ["optimized", "managed", "defined", "initial"],
+          "description": "Prozessreife"
+        },
+        "process_gaps": {
+          "type": "list",
+          "required": false,
+          "description": "Prozesslücken"
+        },
+        "improvement_potential": {
+          "type": "text",
+          "required": false,
+          "max_length": 500,
+          "description": "Verbesserungspotenzial"
+        }
+      }
+    },
+    "stakeholder_analysis": {
+      "description": "Stakeholder-Analyse",
+      "fields": {
+        "key_stakeholders": {
+          "type": "list",
+          "required": false,
+          "description": "Wichtige Stakeholder"
+        },
+        "stakeholder_concerns": {
+          "type": "list",
+          "required": false,
+          "description": "Stakeholder-Bedenken"
+        },
+        "communication_required": {
+          "type": "boolean",
+          "required": false,
+          "description": "Kommunikation erforderlich"
+        }
+      }
+    }
+  }
+}

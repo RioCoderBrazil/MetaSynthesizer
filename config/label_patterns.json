@@ -1,0 +1,73 @@
+{
+  "labels": {
+    "wik": {
+      "patterns": ["wik", "wesentliches in kürze", "l'essentiel en bref", "essenziale in breve", "key facts"],
+      "priority": 1,
+      "description": "Executive summary / Key facts section"
+    },
+    "summary": {
+      "patterns": ["zusammenfassung", "résumé", "riassunto", "summary", "executive summary"],
+      "priority": 1,
+      "description": "Executive summary section"
+    },
+    "introduction": {
+      "patterns": ["einleitung", "introduction", "introduzione", "ausgangslage", "contexte", "contesto", "zielsetzung", "objectif", "obiettivo", "methodik", "méthodologie", "metodologia", "methodology"],
+      "priority": 2,
+      "description": "Introduction or context section"
+    },
+    "findings": {
+      "patterns": ["feststellungen", "constatations", "constatazioni", "findings", "ergebnisse", "resultate", "ergebnis", "résultat", "risultato", "result"],
+      "priority": 3,
+      "description": "Main findings and observations"
+    },
+    "evaluation": {
+      "patterns": ["bewertung", "beurteilung", "évaluation", "appréciation", "valutazione", "evaluation", "assessment"],
+      "priority": 4,
+      "description": "Evaluation and assessment section"
+    },
+    "recommendations": {
+      "patterns": ["empfehlungen", "recommandations", "raccomandazioni", "recommendations", "handlungsempfehlungen"],
+      "priority": 5,
+      "description": "Recommendations for action"
+    },
+    "response": {
+      "patterns": ["stellungnahme", "prise de position", "presa di posizione", "response", "antwort", "reaktion"],
+      "priority": 6,
+      "description": "Response from audited entity"
+    },
+    "appendix": {
+      "patterns": ["anhang", "annexe", "allegato", "appendix", "beilage"],
+      "priority": 7,
+      "description": "Appendix or supplementary material"
+    }
+  },
+  "title_patterns": {
+    "exclude_from_labeling": true,
+    "patterns": [
+      "^\\d+\\.?\\s+",
+      "^[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*$",
+      "^[A-Z\\s]+$",
+      "^.{1,50}$"
+    ],
+    "description": "Patterns to identify titles that should be references, not labeled content"
+  },
+  "learning_enabled": true,
+  "color_mapping": {
+    "#00FFFF": "wik",
+    "#FFFF00": "introduction",
+    "#00FF00": "findings",
+    "#0000FF": "evaluation",
+    "#FF8C00": "recommendations",
+    "#FF00FF": "response",
+    "#FFA500": "recommendations",
+    "#FFD700": "recommendations",
+    "#DAA520": "recommendations",
+    "#B8860B": "recommendations",
+    "#FFC0CB": "response",
+    "#FFB6C1": "response",
+    "#DDA0DD": "response",
+    "#9370DB": "evaluation",
+    "#808080": "unknown",
+    "#C0C0C0": "unknown"
+  }
+}

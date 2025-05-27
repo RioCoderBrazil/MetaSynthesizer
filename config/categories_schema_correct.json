@@ -1,0 +1,178 @@
+{
+  "PA-Nummer": {
+    "type": "alphanum",
+    "max_length": 8,
+    "description": "Alphanum, 2-8 Zeichen",
+    "required": true,
+    "extract_from": ["title", "header", "introduction"]
+  },
+  "Berichtstitel": {
+    "type": "text",
+    "max_length": 15,
+    "description": "Kein Text, max 15 Wörter",
+    "required": true,
+    "extract_from": ["title", "header"]
+  },
+  "Berichtdatum": {
+    "type": "date",
+    "format": "YYYY-MM-DD",
+    "description": "YYYY-MM-DD, max 10 Zeichen",
+    "required": true,
+    "extract_from": ["header", "introduction", "metadata"]
+  },
+  "Themenbericht": {
+    "type": "text",
+    "max_length": 3,
+    "description": "Kontext, Top-3 Stichwörter, komma-separiert",
+    "required": true,
+    "extract_from": ["introduction", "summary", "findings"]
+  },
+  "Kernproblem": {
+    "type": "text",
+    "max_length": 40,
+    "description": "Freitext, max 40 Wörter",
+    "extract_from": ["findings", "evaluation", "critical_points"],
+    "needs_analysis": true
+  },
+  "Assoziierte Kosten": {
+    "type": "text",
+    "max_length": 40,
+    "description": "Freitext, max 40 Wörter - Zusammenfassung der im Bericht genannten oder abgeleiteten Kosten",
+    "extract_from": ["findings", "costs", "financial_analysis"],
+    "default": "NULL erfasst, falls nicht erwähnt"
+  },
+  "Risiken des Bundes": {
+    "type": "text",
+    "max_length": 30,
+    "description": "Stichwörter, max 30 Wörter - Genannte Zuständigkeiten des Bundes",
+    "extract_from": ["findings", "risks", "responsibilities"],
+    "default": "NULL erfasst"
+  },
+  "Umwelt, Info A (Relevante Akteure)": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Aussagen zu relevanten Akteuren / Datenkultur",
+    "extract_from": ["findings", "stakeholders", "actors"],
+    "is_quote": true
+  },
+  "Umwelt, Info B (Berichtsprache/Datei)": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat (kurz), max 200 Wörter - Aussagen zu kritischen oder unverwirklichen Daten",
+    "extract_from": ["findings", "data_issues", "critical_data"],
+    "is_quote": true
+  },
+  "Umwelt, Info C (Bedenken/Monitoring)": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Aussagen zu fehlenden Monitoring / Controlling",
+    "extract_from": ["findings", "monitoring", "control_issues"],
+    "is_quote": true
+  },
+  "Flankieigend A (kein Plan)": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Kein Plan vorhanden",
+    "extract_from": ["findings", "planning_issues", "no_plan"],
+    "is_quote": true
+  },
+  "Flankieigend B (Plan unvollständig)": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Plan existiert, aber unvollständig",
+    "extract_from": ["findings", "planning_issues", "incomplete_plan"],
+    "is_quote": true
+  },
+  "Flankieigend C (in der Nachverfolgung)": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Nur Laufendes oder folgendes / originaler Plan",
+    "extract_from": ["findings", "follow_up", "ongoing_plans"],
+    "is_quote": true
+  },
+  "Umsetzungsstatus": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Bezug, dass Massnahmen nicht oder verspätet ergriffen wurden",
+    "extract_from": ["findings", "implementation_status", "delayed_measures"],
+    "is_quote": true
+  },
+  "Verdigungskosten": {
+    "type": "text",
+    "max_length": 25,
+    "description": "Text/Zahl, max 25 Zeichen - Zeitangabe plus Kontext (\"x Jahre\")",
+    "extract_from": ["costs", "defense_costs", "time_costs"],
+    "default": "NULL erfasst"
+  },
+  "Unrelevante Faktoren": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Gesunde hat Verzigerung",
+    "extract_from": ["findings", "irrelevant_factors", "delays"],
+    "is_quote": true
+  },
+  "Anpassungen": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Budenz/Schaken durch Nichtförung",
+    "extract_from": ["findings", "adjustments", "budget_issues"],
+    "is_quote": true
+  },
+  "Empfehlungen": {
+    "type": "text",
+    "max_length": 200,
+    "description": "Wörtliches Zitat, max 200 Wörter - Wörtliche EFK-Empfehlungen",
+    "extract_from": ["recommendations"],
+    "is_quote": true,
+    "required": true
+  },
+  "Empfehlung Priorität": {
+    "type": "text",
+    "max_length": 1,
+    "description": "Dropdown 1/2/3, 1 Zeichen - Dringlichkeit laut Bericht",
+    "extract_from": ["recommendations"],
+    "values": ["1", "2", "3"],
+    "default": "1"
+  },
+  "Umsetzungsstratus Empfehlung": {
+    "type": "text",
+    "max_length": 1,
+    "description": "Dropdown Offen/In Bearbeitung/Gelöst/Kein Plan, 1 Zeichen - Stand der Umsetzung",
+    "extract_from": ["recommendations", "response", "implementation"],
+    "values": ["O", "B", "G", "K"],
+    "value_mapping": {
+      "O": "Offen",
+      "B": "In Bearbeitung", 
+      "G": "Gelöst",
+      "K": "Kein Plan"
+    },
+    "default": "O"
+  },
+  "Selbsteinlassung": {
+    "type": "text",
+    "max_length": 30,
+    "description": "Boolean Yes/No, max 30 Zeichen - Alle reformverderben Selten; falls nicht im Plan",
+    "extract_from": ["response", "self_assessment"],
+    "values": ["Yes", "No"],
+    "default": "No"
+  },
+  "Anhänge relevant": {
+    "type": "text",
+    "max_length": 1,
+    "description": "Boolean Yes/No, 1 Zeichen - Yes, falls Info nur im Anhang",
+    "extract_from": ["appendix", "attachments"],
+    "values": ["Y", "N"],
+    "value_mapping": {
+      "Y": "Yes",
+      "N": "No"
+    },
+    "default": "N"
+  },
+  "Revisionsletter": {
+    "type": "text",
+    "max_length": 40,
+    "description": "Klartext, max 40 Wörter - Name des Revisionsleiters",
+    "extract_from": ["header", "metadata", "signature"],
+    "required": true
+  }
+}

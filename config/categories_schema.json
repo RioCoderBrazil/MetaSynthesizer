@@ -1,0 +1,159 @@
+{
+  "PA-Nummer": {
+    "type": "alphanum",
+    "max_length": 8,
+    "description": "Offizielle Prüfauftrags-ID",
+    "required": true
+  },
+  "Berichttitel": {
+    "type": "text",
+    "max_length": 15,
+    "description": "Offizieller Titel des Prüfberichts",
+    "required": true
+  },
+  "Berichtdatum": {
+    "type": "date",
+    "format": "YYYY-MM-DD",
+    "description": "Publikations- oder Abschlussdatum",
+    "required": true
+  },
+  "Themenbericht": {
+    "type": "text",
+    "max_length": 3,
+    "description": "Top-3 Stichwörter, komma-separiert",
+    "required": true
+  },
+  "Kernproblem": {
+    "type": "text",
+    "max_length": 40,
+    "description": "Hauptherausforderung laut Bericht",
+    "extract_from": ["findings", "evaluation"],
+    "needs_analysis": true
+  },
+  "Assoziierte Kosten": {
+    "type": "text",
+    "max_length": 40,
+    "description": "Zusammenfassung der im Bericht genannten Kosten",
+    "extract_from": ["findings"],
+    "default": "NULL"
+  },
+  "Ungewisse Kosten": {
+    "type": "text",
+    "max_length": 40,
+    "description": "Risikopotenzial oder unschätzbare Verluste",
+    "extract_from": ["findings", "evaluation"],
+    "default": "NULL"
+  },
+  "Betroffene_Akteure": {
+    "type": "text",
+    "max_length": 6,
+    "description": "Hauptakteure, max. 6 Einträge komma-separiert",
+    "extract_from": ["findings", "introduction"],
+    "required": true
+  },
+  "Berichtssprache": {
+    "type": "text",
+    "max_length": 2,
+    "description": "Hauptsprache des Berichts (DE/FR/EN/IT)",
+    "required": true
+  },
+  "Bundesamt_betroffen": {
+    "type": "text",
+    "max_length": 7,
+    "description": "Liste der geprüften Bundesämter/Organisationen",
+    "extract_from": ["introduction", "findings"],
+    "required": true
+  },
+  "Kritikpunkte": {
+    "type": "text",
+    "max_length": 15,
+    "description": "Hauptkritikpunkte mit Schweregrad",
+    "extract_from": ["findings", "evaluation"],
+    "required": true
+  },
+  "Empfehlungen": {
+    "type": "text",
+    "max_length": 15,
+    "description": "Wichtigste Empfehlungen",
+    "extract_from": ["recommendations"],
+    "needs_analysis": true,
+    "required": true
+  },
+  "Umsetzungsstatus": {
+    "type": "text",
+    "max_length": 10,
+    "description": "Stand der Umsetzung (angenommen/abgelehnt/offen)",
+    "extract_from": ["response"],
+    "default": "NULL"
+  },
+  "Massnahmen_angedroht": {
+    "type": "text",
+    "max_length": 10,
+    "description": "Erwähnte Konsequenzen bei Nichtbeachtung",
+    "extract_from": ["recommendations", "evaluation"],
+    "default": "NULL"
+  },
+  "Rechtliche_Grundlagen": {
+    "type": "text",
+    "max_length": 10,
+    "description": "Referenzierte Gesetze/Verordnungen",
+    "extract_from": ["introduction", "evaluation"],
+    "default": "NULL"
+  },
+  "Benchmarks_International": {
+    "type": "text",
+    "max_length": 5,
+    "description": "Internationale Vergleiche",
+    "extract_from": ["evaluation", "findings"],
+    "default": "NULL"
+  },
+  "Zeitraum_der_Prüfung": {
+    "type": "date_range",
+    "format": "YYYY-MM to YYYY-MM",
+    "description": "Geprüfter Zeitraum",
+    "extract_from": ["introduction"],
+    "required": true
+  },
+  "Follow_up_geplant": {
+    "type": "boolean",
+    "description": "Ist eine Nachprüfung geplant?",
+    "extract_from": ["recommendations", "response"],
+    "default": "NULL"
+  },
+  "Verweis_auf_frühere_Berichte": {
+    "type": "text",
+    "max_length": 10,
+    "description": "Referenzen zu früheren Berichten",
+    "extract_from": ["introduction", "findings"],
+    "default": "NULL"
+  },
+  "Kommunikation_mit_Medien": {
+    "type": "text",
+    "max_length": 5,
+    "description": "Erwähnung von Medienkommunikation",
+    "extract_from": ["response"],
+    "default": "NULL"
+  },
+  "Politischer_Kontext": {
+    "type": "text",
+    "max_length": 5,
+    "description": "Politische Ereignisse/Initiativen",
+    "extract_from": ["introduction", "evaluation"],
+    "default": "NULL"
+  },
+  "Wirkung_erwartet": {
+    "type": "text",
+    "max_length": 10,
+    "description": "Erwartete Auswirkungen der Empfehlungen",
+    "extract_from": ["recommendations", "evaluation"],
+    "default": "NULL"
+  },
+  "Umvolzt_Info_A": {
+    "type": "text",
+    "max_length": 50,
+    "description": "Erweiterte Kontextinformationen",
+    "extract_from": ["findings", "evaluation"],
+    "needs_analysis": true,
+    "default": "NULL"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "color_to_label": {
+    "turquoise": {
+      "rgb": [0, 255, 255],
+      "hex": "#00FFFF",
+      "label": "wik",
+      "description": "Wesentliches in Kürze / L'essentiel en bref"
+    },
+    "yellow": {
+      "rgb": [255, 255, 0],
+      "hex": "#FFFF00",
+      "label": "introduction",
+      "description": "Einleitung, Auftrag, Ausgangslage"
+    },
+    "bright_green": {
+      "rgb": [0, 255, 0],
+      "hex": "#00FF00",
+      "label": "findings",
+      "description": "Feststellungen / Constatations"
+    },
+    "blue": {
+      "rgb": [0, 0, 255],
+      "hex": "#0000FF",
+      "label": "evaluation",
+      "description": "Beurteilung / Évaluation"
+    },
+    "dark_yellow": {
+      "rgb": [255, 140, 0],
+      "hex": "#FF8C00",
+      "label": "recommendations",
+      "description": "Empfehlungen / Recommandations"
+    },
+    "pink": {
+      "rgb": [255, 0, 255],
+      "hex": "#FF00FF",
+      "label": "response",
+      "description": "Stellungnahme / Prise de position"
+    },
+    "gray": {
+      "rgb": [128, 128, 128],
+      "hex": "#808080",
+      "label": "annex",
+      "description": "Anhang / Annexe"
+    }
+  },
+  "tolerance": 10
+}
