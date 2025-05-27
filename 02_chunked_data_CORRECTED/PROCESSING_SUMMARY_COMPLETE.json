@@ -1,0 +1,16 @@
+{
+  "processing_date": "02_chunked_data_CORRECTED/PROCESSING_SUMMARY.json",
+  "documents_processed": 20,
+  "total_documents": 20,
+  "total_characters": 1015895,
+  "statistics": {
+    "wik": 208633,
+    "response": 70311,
+    "introduction": 101959,
+    "findings": 441607,
+    "evaluation": 129931,
+    "recommendations": 24859,
+    "appendix": 38595
+  },
+  "note": "Updated with all 20 documents including farcoded/farbcoded/Coloured variants"
+}

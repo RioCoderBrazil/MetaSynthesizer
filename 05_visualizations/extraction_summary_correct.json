@@ -1,0 +1,40 @@
+{
+  "extraction_date": "2025-05-26T23:35:43.308133",
+  "total_documents": 20,
+  "total_categories": 23,
+  "overall_completeness": 92.83,
+  "category_performance": {
+    "PA-Nummer": 95.0,
+    "Berichtstitel": 95.0,
+    "Berichtdatum": 75.0,
+    "Themenbericht": 100.0,
+    "Kernproblem": 100.0,
+    "Assoziierte Kosten": 100.0,
+    "Risiken des Bundes": 100.0,
+    "Umwelt, Info A (Relevante Akteure)": 100.0,
+    "Umwelt, Info B (Berichtsprache/Datei)": 100.0,
+    "Umwelt, Info C (Bedenken/Monitoring)": 100.0,
+    "Flankieigend A (kein Plan)": 80.0,
+    "Flankieigend B (Plan unvollständig)": 100.0,
+    "Flankieigend C (in der Nachverfolgung)": 100.0,
+    "Umsetzungsstatus": 95.0,
+    "Verdigungskosten": 65.0,
+    "Unrelevante Faktoren": 95.0,
+    "Anpassungen": 80.0,
+    "Empfehlungen": 95.0,
+    "Empfehlung Priorität": 100.0,
+    "Umsetzungsstratus Empfehlung": 100.0,
+    "Selbsteinlassung": 100.0,
+    "Anhänge relevant": 100.0,
+    "Revisionsletter": 60.0
+  },
+  "priority_distribution": {
+    "Priority 1": 15,
+    "Priority 2": 4,
+    "Priority 3": 1
+  },
+  "status_distribution": {
+    "Open": 10,
+    "In Progress": 10
+  }
+}

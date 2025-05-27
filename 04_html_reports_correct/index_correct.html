@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>EFK Meta-Analyse - Übersicht</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .summary {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .summary-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .summary-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .summary-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .reports-table {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: normal;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        a {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .completeness-bar {
+            width: 100px;
+            height: 20px;
+            background-color: #eee;
+            position: relative;
+            display: inline-block;
+        }
+        .completeness-fill {
+            height: 100%;
+            background-color: #28a745;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .status-open {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .status-progress {
+            background-color: #17a2b8;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>EFK Meta-Analyse - Übersicht aller Berichte</h1>
+        <p>Generiert am 26.05.2025 23:35</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Zusammenfassung</h2>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div class="summary-value">20</div>
+                <div class="summary-label">Dokumente analysiert</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-value">92.8%</div>
+                <div class="summary-label">Gesamtvollständigkeit</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-value">427</div>
+                <div class="summary-label">Datenpunkte gefüllt</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-value">19</div>
+                <div class="summary-label">Empfehlungen</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="reports-table">
+        <h2>Berichte</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>PA-Nummer</th>
+                    <th>Berichtstitel</th>
+                    <th>Vollständigkeit</th>
+                    <th>Empfehlung Status</th>
+                    <th>Priorität</th>
+                    <th>Bericht</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>11380BE</td>
+                    <td>Prüfung der Bewirtschaftung von Umweltrisiken im VBS</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 91.3%"></div>
+                        </div>
+                        91.3%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="11380BE_Revisionsbericht - Bewirtschaftung von Umweltrisiken - Altlasten und Sanierungskosten - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>12406BE</td>
+                    <td>Prüfung der Altlastenbearbeitung und Spezialfinanzierung beim BAFU</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 91.3%"></div>
+                        </div>
+                        91.3%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>2</td>
+                    <td><a href="12406BE_AL-Sanierung  -Altlastenbearbeitung und deren Finanzierung - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>16409BE</td>
+                    <td>Prüfung der Kostenstudie 2016 für die Stilllegung der Kernanlagen und die Entsorgung</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 95.7%"></div>
+                        </div>
+                        95.7%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="16409BE_KS16_V03 Title - Prüfung der Erstellung der Kostenstudie KS16 - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>16451BE</td>
+                    <td>Die BLO sind auf ihr Kerngeschäft ausgerichtet</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 87.0%"></div>
+                        </div>
+                        87.0%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>2</td>
+                    <td><a href="16451BE_Immobilien_V04 - Strategische Führung des Immobilienportfolios Bund - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>18185BE</td>
+                    <td>Audit du projet de la troisième correction du Rhône</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 91.3%"></div>
+                        </div>
+                        91.3%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>2</td>
+                    <td><a href="18185BE_R3_V03 - Audit de surveillance financière de la troisième correction du Rhône - Coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>18261BE</td>
+                    <td>None</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 87.0%"></div>
+                        </div>
+                        87.0%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>2</td>
+                    <td><a href="18261BE_Mikroverunr_V03 - Umsetzung der Massnahmen zur Reduktion der Mikroverunreinigungen im Abwasser - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>18297BE</td>
+                    <td>Zielvorgaben des Parlaments grösstenteils eingehalten und teilweise deutlich übertroffen</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 95.7%"></div>
+                        </div>
+                        95.7%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="18297BE_Eval_Sparprogramme_V04 - Evaluation der Wirksamkeit der Sparprogramme des Bundes - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>18360BE</td>
+                    <td>Prüfung der Notwendigkeit der Massnahmen zur Stärkung der Schweiz als Gaststaat</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 87.0%"></div>
+                        </div>
+                        87.0%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="18360BE DFAE_DOI_V04 - Audit de la nécessité des mesures pour renforcer la Suisse comme Etat hôte - farcoded_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>None</td>
+                    <td>Aufsicht über die Kernkraftwerke durch ENSI und STENFO</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 87.0%"></div>
+                        </div>
+                        87.0%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="20018_ENSI_V03 - Prüfung der Aufsicht über die Stilllegung von Kernkraftwerken - colored_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>20028BE</td>
+                    <td>Prüfung der NRP-Darlehen für Tourismusinfrastrukturen</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 87.0%"></div>
+                        </div>
+                        87.0%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="20028BE Prüfbericht V04 - DOC - Wirtschaftlichkeitsprüfung von Tourismusinfrastrukturprojekten der Neuen Regionalpolitik - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>20397BE</td>
+                    <td>Surveillance financière des organisations de gestion des déchets</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 91.3%"></div>
+                        </div>
+                        91.3%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="20397BE_Rapport_V03 DOC - Audit de la surveillance du recyclage des déchets soumis à des taxes et contributions anticipées - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>20428BE</td>
+                    <td>Wirtschaftlichkeit und Transparenz bei der Ausserdienststellung von Rüstungsgütern</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="20428BE Prüfbericht V03 - Prüfung der Entsorgung und Veräusserung von Rüstungsgütern - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>21545BE</td>
+                    <td>Informationen zur Altlastensanierung</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="21545BE Prüfbericht V04 - DOC - Prüfung des Umgangs mit Altlasten - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>22159BE</td>
+                    <td>Projektrisiken und deren Eintretenswahrscheinlichkeit sind unzureichend begründet</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 87.0%"></div>
+                        </div>
+                        87.0%
+                    </td>
+                    <td>
+                        
+                        <span class="status-badge status-open">Offen</span>
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="22159BE Kurzbericht V03 - Berichterstattung über die Prüfung der Botschaft für die Räumung des Munitionslagers Mitholz - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>22723BE</td>
+                    <td>Limitierte Baukapazitäten bei der SBB-Infrastruktur gefährden Substanzerhalt und Ausbau</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 95.7%"></div>
+                        </div>
+                        95.7%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="22723BE Prüfbericht V04 - DOC - Prüfung der Investitionsplanung  - farbcoded_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>23303BE</td>
+                    <td>Conduite de la subvention - Un plan de contrôle ajusté aux risques n'existe pas</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 91.3%"></div>
+                        </div>
+                        91.3%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="23303BE BAFU Prüfbericht V03 - Audit de subventions des assainissements écologiques dans le domaine de l'énergie hydraulique - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>23489BE</td>
+                    <td>Umgang des Bundes mit problematischen Stoffen</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 95.7%"></div>
+                        </div>
+                        95.7%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="23489BE Prüfbericht V03 - Querschnittsprüfung des Umgangs des Bundes mit problematischen Stoffen - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>23504BE</td>
+                    <td>Prüfung der Objektstrategie für die Betriebsimmobilien des Bundesamts für Zoll und Grenzsicherheit</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="23504BE Bericht Betriebsimmobilien V03- Prüfung der Umsetzung der Objektstrategie für die Betriebsimmobilien - colored_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>23767BE</td>
+                    <td>Die Aufsicht des BAV über die Seilbahnen funktioniert - potenzielle Mitfinanzierung von Rückbauten hat Präzisierungsbedarf</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 95.7%"></div>
+                        </div>
+                        95.7%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>3</td>
+                    <td><a href="23767BE Prüfbericht V04 - DOC - Prüfung der Aufsicht über die Seilbahnen mit Schwerpunkt Finanzierung Rückbau - coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+                <tr>
+                    <td>24137BE</td>
+                    <td>Prüfung der Führung und Steuerung des Räumprojekts Mitholz</td>
+                    <td>
+                        <div class="completeness-bar">
+                            <div class="completeness-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>
+                        
+                        -
+                        
+                    </td>
+                    <td>1</td>
+                    <td><a href="24137BE GS-VBS Räumung Mitholz V04 DOC - Projektprüfung Räumung ehemaliges Munitionslager der Armee in Mitholz- coloured_correct_report.html">Bericht anzeigen</a></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

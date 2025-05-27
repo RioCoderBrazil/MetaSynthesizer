@@ -1,0 +1,16 @@
+{
+  "processing_date": "2025-05-27T06:22:04.833975",
+  "documents_processed": 17,
+  "total_documents": 17,
+  "total_characters": 860073,
+  "statistics": {
+    "wik": 169830,
+    "response": 56099,
+    "introduction": 83439,
+    "findings": 388891,
+    "evaluation": 105531,
+    "recommendations": 19613,
+    "appendix": 36670
+  },
+  "output_directory": "02_chunked_data_CORRECTED"
+}
